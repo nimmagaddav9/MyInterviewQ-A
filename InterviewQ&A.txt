@@ -1,0 +1,244 @@
+My Previous Interview Question and Answers
+
+1. Tell me about yourself?
+
+I am a core UI Developer with 12+ years of experience building .com websites for different organizations using HTML5, CSS3,
+JavaScript, Angular 18, React.js, and Redux. 
+In the past 2 years, I worked on the React migration team, where I converted the .net pages to react on united.com. 
+Frontend is React, and used ATMOS (Own library) components used company wide.
+
+Worked on Security features for users where they can manage there account like Forgot password, Forgot MileagePlus number, 
+security questions, Sign-in features, Miles-Pooling, United Club pass,  Recent Activity, dashboard updates and 
+KTN(Known Traveler Number), Accessibility guidelines features on united.com.
+
+used middleware such as redux-saga to handle asynchronous tasks such as API calls, data fetching, and impure actions in a more organized and efficient way.
+
+The new initiative worked on Miles-Pooling( points you get after traveling), TSA Precheck, Account security and management features, and Under18.
+
+Previously worked with Accelerator team for Visa Inc. remediation of MBDA modules like Application Management, Account Management, Portfolio Management, Analytics, Recurring billing, Virtual Terminal, etc for bank users like Wells Fargo,  Bank of America, etc
+
+Capital Group worked on DAVIS Project. Davis stands for Data visualization where we build different highcharts using react and integrate into the AEM., the backend is Java. Previously I worked on Creative Workbench, a writing tool where articles are published on capital group websites.
+
+At Cerner Corporation worked on the medical examination forms.
+
+In Office Depot worked on black Friday reporting.
+
+Satinos Technologies created a tax portal and a schoomin website for the Vignan schools.
+
+2. Have you worked on AWS? how do you do the deployment?
+
+"Yes, I have experience working with AWS, particularly in deploying front-end applications. 
+For deployment, I typically use services like AWS S3, CloudFront, and sometimes AWS Amplify for a more integrated workflow.
+
+S3 (Simple Storage Service): I first build the front-end app using tools like Webpack or create-react-app to bundle and optimize the 
+files. Once the build is ready, I upload the static files (HTML, CSS, JavaScript, etc.) to an S3 bucket. S3 acts as a static file host,
+and I configure it for public access.
+
+CloudFront: After uploading to S3, I use CloudFront, which is a Content Delivery Network (CDN) service, to serve the static files 
+globally. CloudFront caches the files at edge locations, improving load times for users from different geographical regions.
+
+AWS Amplify: For a more integrated experience, I’ve also worked with AWS Amplify, which simplifies the deployment of front-end 
+applications. Amplify provides a CI/CD pipeline that connects to your Git repository (like GitHub or GitLab) and automatically deploys 
+the app whenever changes are pushed to the main branch. It also has built-in features for authentication, API integration, and hosting.
+
+
+Deployment Process in Amplify:
+
+I connect my Git repository to AWS Amplify.
+It automatically detects the front-end framework (React, Vue, etc.) and configures the build settings.
+Once the app is built, it is deployed to Amplify hosting, and I can access the app via a URL provided by Amplify.
+Amplify also supports automatic rollbacks in case something goes wrong during the deployment.
+CI/CD Pipelines: I also set up continuous integration and continuous delivery (CI/CD) pipelines using AWS CodePipeline, combined with CodeBuild. CodePipeline allows for automatic deployments whenever changes are pushed to the repository, ensuring smooth and consistent deployment cycles."
+
+3. Have you worked on Cloud Deployment other than AWS?
+
+"While I have primarily worked with AWS for cloud deployments, I’m aware of the key differences in services offered by other platforms
+like Google Cloud and Microsoft Azure. I’ve read about their offerings, such as Google Cloud's Firebase hosting and Azure App Service, 
+and I’m eager to learn more about deploying React applications on those platforms as well. I believe the deployment process generally 
+follows similar steps, and I am confident in my ability to adapt and work with other cloud services if required."
+
+
+
+4. Do you have Backend experience? how many years? which tools did you use?
+
+"While my primary focus has been on frontend development using React.js, I have worked closely with backend developers and have 
+gained familiarity with the backend stack. I understand the basics of RESTful APIs, how to handle HTTP requests, and have used tools 
+like Postman to test APIs. I am also comfortable working with databases like MongoDB, and I am eager to expand my backend skills 
+further, especially in Node.js and Express, to become more well-rounded."
+
+5. Have you worked on SQL?
+"I haven't worked directly with SQL in depth, but I am familiar with the basic concepts like SELECT, INSERT, UPDATE, and DELETE queries.
+In my React.js projects, I have primarily worked with APIs to fetch data, and I know that the data often comes from an SQL database 
+on the backend. I am open to learning more about SQL as I know it's an important skill for full-stack development."
+
+6. Have you used Data Structure?
+Yes, I have worked with various data structures in the context of React. React itself is not heavily dependent on specific 
+data structures, but when building applications, we often use common data structures such as arrays, objects, maps, and sets to 
+manage and manipulate state, props, and other dynamic data.
+
+7. How do you pass a string in palindrome? explain ?
+
+A palindrome is a word, phrase, or sequence that reads the same forward and backward (ignoring spaces, punctuation, and capitalization).
+
+Conceptual Explanation: To check if a string is a palindrome:
+
+First, we can remove any non-alphanumeric characters and convert the string to lowercase to make the check case-insensitive.
+Then, we compare the string to its reverse. If the original string matches the reversed string, it’s a palindrome.
+For example:
+
+"madam" is a palindrome because it reads the same forwards and backwards.
+"hello" is not a palindrome because it doesn’t read the same when reversed.
+
+8. What are SQL Views?
+
+Definition: A view is essentially a stored query or SELECT statement that you can treat like a table. 
+It simplifies complex queries and allows you to reuse commonly used SELECT queries.
+
+Types of Views:
+
+Simple View: A view based on a single table, containing simple SELECT statements.
+Complex View: A view based on multiple tables, involving joins, subqueries, and other advanced SQL operations.
+
+Creating a View: A view can be created using the CREATE VIEW statement. For example:
+
+sql
+--------------------------------
+CREATE VIEW employee_view AS
+SELECT name, department, salary
+FROM employees
+WHERE salary > 50000;
+
+9. How to improve performance in react app?
+
+1. Use React’s PureComponent and React.memo
+2. Avoid Reconciliation Issues (Keys in Lists)
+3. Code Splitting
+4. Use useMemo and useCallback
+5. Optimize Re-renders with shouldComponentUpdate
+6. Virtualization for Large Lists
+7. Lazy Loading Images
+8. Debounce or Throttle Expensive Operations
+9. Server-Side Rendering (SSR) and Static Site Generation (SSG)
+10. Reduce the Bundle Size
+11. Use Web Workers for Heavy Computations
+12. Optimize CSS and Media Assets
+
+10. how to improve performance in Backend/ SQL?
+Improving performance in the backend and SQL is crucial for ensuring that applications scale effectively, especially
+when dealing with large amounts of data. Here are some strategies to improve backend and SQL performance:
+
+1. Database Indexing
+Use proper indexes on the columns that are frequently used in WHERE, JOIN, and ORDER BY clauses. 
+Indexes allow the database to quickly look up data without scanning every row in a table.
+
+2. Query Optimization
+Analyze and optimize queries: Use the database's EXPLAIN feature (or similar) to understand how queries are being executed and identify performance bottlenecks.
+
+3. Caching
+Implement caching mechanisms such as Redis or Memcached to store frequently accessed data in memory, reducing the number of queries to the database.
+
+4. Denormalization
+Denormalize tables when appropriate (storing redundant data) to avoid complex joins in frequently accessed queries. 
+This can improve read performance, though it may result in some additional complexity for data consistency and updates.
+
+5. Connection Pooling
+6. Use of Stored Procedures
+7. Database Partitioning and Sharding
+8. Optimizing Backend Logic
+9. Read/Write Separation
+10. Use of NoSQL (When Appropriate)
+11. Database Transactions
+12. Load Balancing
+13. Database Maintenance
+14. Asynchronous Processing
+
+
+11. Explain architecture for Full Stack?
+
+  +-------------------+        +-------------------+
+  |    React (Frontend) |  <---> |   Node.js + Express (Backend) |
+  |  - Components      |        |   - REST/GraphQL API       |
+  |  - State Management |        |   - Database Queries       |
+  |  - API Calls       |        |   - Authentication        |
+  |  - UI/UX           |        +---------------------------+
+  +-------------------+               
+           |                                    
+           |                                     
+    +---------------------+                     
+    |    Database Layer   |                  
+    |   (SQL/NoSQL)       |                     
+    +---------------------+                     
+
+In a Full Stack application with React.js, the architecture typically involves both a front-end (client-side) and a back-end (server-side). Here’s a breakdown of a typical Full Stack architecture with React.js:
+
+1. Frontend (Client-side)
+React.js: The front-end framework for building the user interface (UI). React is a JavaScript library for building user interfaces 
+in a component-based architecture. It allows you to create reusable components, manage the state of your application, 
+and efficiently update the UI through a virtual DOM.
+
+2. Backend (Server-side)
+Node.js with Express: The backend is often powered by Node.js, which is a JavaScript runtime, and Express.js, 
+a web application framework for Node.js. Express helps in routing, handling HTTP requests, middleware integration, and more.
+
+Database: On the backend, the data is typically stored in a database, either relational (e.g., PostgreSQL, MySQL) or NoSQL (e.g., MongoDB, Firebase).
+
+
+3. Communication Between Frontend and Backend
+REST API / GraphQL API: React communicates with the back-end using HTTP requests. When a user interacts with the UI (e.g., submitting a form), React will send an HTTP request (POST, GET, PUT, DELETE) to the server.
+
+Authentication: If the application requires user authentication, the frontend will send requests to the backend to authenticate and authorize users. 
+This can be done using JWT (JSON Web Tokens), session-based authentication, or OAuth.
+
+For secure authentication, you may use libraries like Passport.js or JWT for token generation and verification.
+
+
+4. Deployment
+Frontend Deployment: The React front-end is built (typically using npm run build) into static assets like HTML, CSS, and JS files that can be served by a web server. 
+Popular services for deploying the front-end include Netlify, Vercel, or even a cloud service like AWS S3.
+
+Backend Deployment: The server-side application (Node.js/Express) can be deployed on cloud platforms like Heroku, AWS EC2, Google Cloud,
+or DigitalOcean. These platforms allow you to scale the application based on traffic demands.
+
+
+
+12. What happens internally for building a website?
+
+Internally, React works by:
+
+Using JSX to create virtual DOM representations of UI components.
+Updating the virtual DOM based on state/props changes.
+Efficiently updating the actual DOM using reconciliation and diffing.
+Using state management to handle dynamic changes.
+Optimizing rendering with techniques like React Fiber and memoization.
+
+13. How does the backend interact with FrontEnd? steps for integration?
+
+Summary of Steps:
+1. Frontend sends an HTTP request (e.g., GET or POST) to the backend API.
+2. Backend processes the request (e.g., business logic, database queries) and sends a response.
+3. Frontend receives and processes the response (e.g., updates state, handles errors).
+4. If applicable, authentication and authorization tokens are used to protect endpoints.
+5. Optionally, real-time communication can be set up using technologies like WebSockets.
+6. Ensure CORS is properly handled if frontend and backend are on different domains.
+
+This is a high-level overview of how the backend and frontend interact in a typical React and backend integration scenario!
+
+
+14. We are looking for backend developer more? are you comfortable working on PostgresSQL?
+"Yes, I am comfortable working with PostgreSQL. I have experience in designing and optimizing databases, writing efficient SQL queries,
+and handling complex relationships and transactions. I'm familiar with PostgreSQL features like indexing, joins, subqueries, and 
+data integrity constraints. I’ve also worked with ORMs (like Sequelize, TypeORM) in conjunction with PostgreSQL to make database 
+interactions more efficient in a Node.js environment. If needed, I'm more than happy to dive deeper into advanced topics such as
+performance tuning, replication, or partitioning."
+
+15. have you worked on LIFO, FIFO models?
+
+"Yes, I have worked with LIFO and FIFO models in the context of data structures. In JavaScript, these are commonly represented using arrays or stacks/queues.
+
+FIFO (First In, First Out): This is typically implemented with a queue. 
+The first element added to the queue is the first one to be removed. 
+In JavaScript, we can use an array to mimic a queue by using the push() method to add elements and the shift() method to remove elements from the front.
+
+LIFO (Last In, First Out): This is commonly represented by a stack. 
+The last element added to the stack is the first one to be removed. 
+In JavaScript, we can use an array as a stack, with push() to add items and pop() to remove the most recently added element.
